@@ -10,22 +10,26 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+public class SecurityConfigurationJPA extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	DataSource dataSource;
 	
+	@Autowired
+	UserDetailsService userDetailsService;
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		//Set your configuration with auth object
-		auth.jdbcAuthentication()	//can also use .inMemoryAuthentication()
-			.dataSource(dataSource);//.withDefaultSchema() provided by spring-security
+		auth.userDetailsService(userDetailsService);	//can also use .inMemoryAuthentication() & .jdbcAuthentication()
+													//.withDefaultSchema() provided by spring-security
 							
 	}
 	

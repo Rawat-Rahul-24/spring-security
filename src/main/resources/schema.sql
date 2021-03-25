@@ -1,4 +1,6 @@
-create table users(
+--default schema provided by Spring Security
+
+/*create table users(
 	username varchar_ignorecase(50) not null primary key,
 	password varchar(50) not null,
 	enabled boolean not null
@@ -10,4 +12,4 @@ create table authorities(
 	constraint fk_authorities_users foreign key(username) references users(username)
 );
 
-create unique index ix_auth_username on authorities(username, authority);
+create unique index ix_auth_username on authorities(username, authority);*/

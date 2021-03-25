@@ -2,13 +2,26 @@ package com.example.main.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	
 	private String username;
-	private String firstName;
-	private String lastName;
-	private Date dob;
+	
+	private String password;
+	
+	private boolean active;
+	
+	private String roles;
+	
 	public String getId() {
 		return id;
 	}
@@ -21,32 +34,26 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getFirstName() {
-		return firstName;
+		
+	public String getPassword() {
+		return password;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getLastName() {
-		return lastName;
+	public boolean isActive() {
+		return active;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setActive(boolean active) {
+		this.active = active;
 	}
-	public Date getDob() {
-		return dob;
+	public String getRoles() {
+		return roles;
 	}
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setRoles(String roles) {
+		this.roles = roles;
 	}
-	public User(String id, String username, String firstName, String lastName, Date dob) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.dob = dob;
-	}
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub

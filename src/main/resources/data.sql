@@ -1,11 +1,13 @@
-INSERT INTO users (username, password, enabled)
-values ('user', 'default_pass', true);
+--sql for some default values in the default schema provided by Spring Security
 
-INSERT INTO users (username, password, enabled)
+/*INSERT INTO users (username, password, enabled)
+values ('user', 'default_pass', true); */
+
+/*INSERT INTO users (username, password, enabled)
 values ('admin', 'default_pass_admin', true);
 
 INSERT INTO authorities (username, authority)
 values ('user', 'ROLE_USER');
 
 INSERT INTO authorities (username, authority)
-values ('admin', 'ROLE_ADMIN');
+values ('admin', 'ROLE_ADMIN'); */
