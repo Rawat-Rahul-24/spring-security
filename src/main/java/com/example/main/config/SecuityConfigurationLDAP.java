@@ -1,4 +1,5 @@
-package com.example.main.config;
+//Configuration file implementing WebSecurityConfigureAdapter using ldapAuthentication
+/*package com.example.main.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -35,4 +36,4 @@ public class SecuityConfigurationLDAP extends WebSecurityConfigurerAdapter{
 	
 	
 
-}
+}*/
