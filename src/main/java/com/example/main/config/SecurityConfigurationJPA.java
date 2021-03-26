@@ -1,4 +1,6 @@
-package com.example.main.config;
+//Configuration class for COnfiguring WebSecurityConfigureAdapter for using JPA Authentication
+
+/*package com.example.main.config;
 
 import javax.sql.DataSource;
 
@@ -46,4 +48,4 @@ public class SecurityConfigurationJPA extends WebSecurityConfigurerAdapter{
 	public PasswordEncoder encoder() {
 		return NoOpPasswordEncoder.getInstance();
 	}
-}
+}*/
